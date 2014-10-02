@@ -1,0 +1,62 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.9/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.9/ http://www.mediawiki.org/xml/export-0.9.xsd" version="0.9" xml:lang="sk">
+  <siteinfo>
+    <sitename>Wikipédia</sitename>
+    <dbname>skwiki</dbname>
+    <base>http://sk.wikipedia.org/wiki/Hlavn%C3%A1_str%C3%A1nka</base>
+    <generator>MediaWiki 1.24wmf22</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Médiá</namespace>
+      <namespace key="-1" case="first-letter">Špeciálne</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Diskusia</namespace>
+      <namespace key="2" case="first-letter">Redaktor</namespace>
+      <namespace key="3" case="first-letter">Diskusia s redaktorom</namespace>
+      <namespace key="4" case="first-letter">Wikipédia</namespace>
+      <namespace key="5" case="first-letter">Diskusia k Wikipédii</namespace>
+      <namespace key="6" case="first-letter">Súbor</namespace>
+      <namespace key="7" case="first-letter">Diskusia k súboru</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">Diskusia k MediaWiki</namespace>
+      <namespace key="10" case="first-letter">Šablóna</namespace>
+      <namespace key="11" case="first-letter">Diskusia k šablóne</namespace>
+      <namespace key="12" case="first-letter">Pomoc</namespace>
+      <namespace key="13" case="first-letter">Diskusia k pomoci</namespace>
+      <namespace key="14" case="first-letter">Kategória</namespace>
+      <namespace key="15" case="first-letter">Diskusia ku kategórii</namespace>
+      <namespace key="100" case="first-letter">Portál</namespace>
+      <namespace key="101" case="first-letter">Diskusia k portálu</namespace>
+      <namespace key="828" case="first-letter">Modul</namespace>
+      <namespace key="829" case="first-letter">Diskusia k modulu</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity</title>
+    <ns>0</ns>
+    <id>313346</id>
+    <revision>
+      <id>3659064</id>
+      <parentid>3191885</parentid>
+      <timestamp>2011-05-27T18:45:35Z</timestamp>
+      <contributor>
+        <ip>95.102.162.76</ip>
+      </contributor>
+      <comment>obrázok</comment>
+      <text xml:space="preserve" bytes="876">[[Súbor:Fakulta elektrotechniky a informatiky STU.jpg|vpravo|náhľad|Pohľad na budovu Fakulty elektrotechniky a informatiky STU]]
+'''Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity''' je jedna zo siedmich fakúlt [[Slovenská technická univerzita v Bratislave|Slovenskej technickej univerzity v Bratislave]]. Je to najstaršia technická fakulta na Slovensku zameraná na [[elektrotechnika|elektrotechniku]], [[informatika|informatiku]] a príbuzné oblasti. Poskytuje medzinárodne uznávané [[univerzitné štúdium]], prevádzkuje [[vedecký výskum]] a vývoj a spolupracuje s akademickými a priemyselnými partnermi doma a v zahraničí. Sídli na Ilkovičovej ulici č. 3 v Bratislave.
+
+== Externé odkazy ==
+* [http://www.fei.stuba.sk Domovská stránka]
+
+{{STU}}
+
+
+{{Výhonok}}
+
+[[Kategória:Slovenská technická univerzita v Bratislave]]</text>
+      <sha1>6t2shzbtu95uezriyiuojoac8oeu7ig</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+</mediawiki>
