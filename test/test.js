@@ -15,3 +15,30 @@ describe("Title", function() {
       });
    });
 });
+
+describe("Anchors", function() {
+  var anchors;
+  app.anchorsTest(file, function(arr) {
+    anchors = arr;
+  });
+  it("First should be: STU", function(done){
+    expect(anchors[0]).to.equal('STU');
+    done();
+  });
+  it("Second should be: Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity|FEI", function(done){
+    expect(anchors[1]).to.equal('Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity|FEI');
+    done();
+  });
+  it("Third should be: bakalárske štúdium", function(done){
+    expect(anchors[2]).to.equal('bakalárske štúdium');
+    done();
+  });
+  it("Fourth should be inžinierske štúdium", function(done){
+    expect(anchors[3]).to.equal('inžinierske štúdium');
+    done();
+  });
+  it("Fifth should be doktorandské štúdium", function(done){
+    expect(anchors[4]).to.equal('doktorandské štúdium');
+    done();
+  });
+});

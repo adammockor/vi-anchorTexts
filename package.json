@@ -19,5 +19,6 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "xml-stream": "^0.4.4"
-  }
+  },
+  "dependencies": {}
 }
