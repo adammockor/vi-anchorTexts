@@ -1,44 +1,46 @@
+// Author: Adam Mockor
+// Dump: 'data/sample_anchors_skwiki_latest_pages_articles.xml'
+// vi-anchorTexts
+
 var chai = require('chai');
 var expect = chai.expect;
+var Q = require('q');
 
 chai.config.includeStack = false;
 
-var app = require('./../app.js').tests;
+var parser = require('../libs/parseXMLfunc.js');
+var search = require('../libs/searchFunc.js');
 
-var file = 'data/fiit.xml';
+var file = '../../data/sample_anchors_skwiki_latest_pages_articles.xml';
 
-describe("Title", function() {
-   it("title shoud be: Fakulta informatiky a informačných technológií Slovenskej technickej univerzity", function(done){
-      app.titleTest(file, function(text) {
-        expect(text).to.equal('Fakulta informatiky a informačných technológií Slovenskej technickej univerzity');
-        done();
-      });
-   });
+describe("Check if Elastisearch is running", function() {
+  it('Elastisearch is running', function() {
+    return parser.checkES('testindex').then(function(bool){
+      expect(bool).to.be.true;
+    });
+  });
 });
 
-describe("Anchors", function() {
-  var anchors;
-  app.anchorsTest(file, function(arr) {
-    anchors = arr;
+describe("Index test anchors", function() { 
+  it('Indexed', function() {
+    return parser.indexAnchors(file,'testindex').then(function(counter){
+      expect(counter).to.be.above(0);
+    });
   });
-  it("First should be: STU", function(done){
-    expect(anchors[0]).to.equal('STU');
-    done();
+});
+
+describe("Search anchor", function() { 
+  it('Should find just one anchor: STU', function() {
+    return search.search('STU', 'testindex').then(function(response){
+      expect(response.hits.total).to.be.equal(1);
+    });
   });
-  it("Second should be: Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity|FEI", function(done){
-    expect(anchors[1]).to.equal('Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity|FEI');
-    done();
-  });
-  it("Third should be: bakalárske štúdium", function(done){
-    expect(anchors[2]).to.equal('bakalárske štúdium');
-    done();
-  });
-  it("Fourth should be inžinierske štúdium", function(done){
-    expect(anchors[3]).to.equal('inžinierske štúdium');
-    done();
-  });
-  it("Fifth should be doktorandské štúdium", function(done){
-    expect(anchors[4]).to.equal('doktorandské štúdium');
-    done();
+});
+
+describe("Check anchor text", function() { 
+  it('Should find anchor text "FEI" for anchor: Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity', function() {
+    return search.search('Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity', 'testindex').then(function(response){
+      expect(response.hits.hits[0]._source.text).to.be.equal('FEI');
+    });
   });
 });

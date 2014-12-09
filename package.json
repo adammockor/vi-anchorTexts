@@ -1,10 +1,10 @@
 {
   "name": "vi-anchorTexts",
-  "version": "0.0.1",
-  "description": "vi-anchorTexts ==============",
-  "main": "app.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha test/test.js -R spec"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,16 @@
   },
   "homepage": "https://github.com/adammockor/vi-anchorTexts",
   "devDependencies": {
+    "byline": "^4.1.1",
     "chai": "^1.9.1",
+    "elasticsearch": "^2.4.3",
+    "jsonfile": "^2.0.0",
+    "q": "^1.0.1",
+    "search-index": "^0.3.7",
+    "string": "^2.2.0",
     "xml-stream": "^0.4.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jsonfile": "^2.0.0"
+  }
 }
